@@ -1,91 +1,122 @@
-# Customer-Behavior-Analysis
-Data analytics project showcasing customer behavior analysis using Python, SQL, Power BI
 
- # Data Analytics Project
- 
- # Overview
+<div align="center">
 
-This project demonstrates an end-to-end data analytics workflow using Python, MySQL, and Power BI.
+# 🛍️ Customer Behavior Analysis
 
-The project covers data loading, exploratory data analysis (EDA), data cleaning, SQL-based analysis, and interactive dashboard creation in Power BI.
+### A small project to understand customer shopping habits using Python, SQL and Power BI.
 
-# Dataset
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL">
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebook">
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" alt="Project status">
+</p>
 
-The dataset is loaded and analyzed using Python before being stored in MySQL for further querying and analysis.
+</div>
 
-# Tools Used
+---
 
-Python – Data loading, cleaning, and exploratory data analysis
-MySQL – Data storage and SQL queries
-Power BI – Data visualization and dashboard creation
+## 📌 About the Project
 
-# Project Steps
+I made this project to understand customer shopping behavior and find useful information from shopping data. I used **Python** to clean and prepare the data, **SQL** to answer business questions, and **Power BI** to present the results in a dashboard.
 
-1. Data Loading
-Loaded the dataset using Python.
-Examined the dataset structure, columns, and data types.
-Identified missing values and potential data-quality issues.
+This project helped me practise working with data and understand how data can be used to make better business decisions.
 
-3. Exploratory Data Analysis (EDA)
+## 🎯 What I wanted to learn
 
-Performed EDA using Python to understand:
+- Clean and prepare data using Python.
+- Find useful patterns in customer purchases.
+- Write SQL queries to answer business questions.
+- Compare customer groups, products and purchase trends.
+- Present the results in a Power BI dashboard.
 
-Dataset structure
-Missing values
-Duplicate records
-Data distributions
-Important trends and patterns
-Relationships between variables
+## 🧰 Tools I used
 
-3. Data Cleaning
+| Tool | How I used it |
+|---|---|
+| 🐍 Python | Cleaning and preparing the data |
+| 📓 Jupyter Notebook | Writing and running Python code |
+| 🗄️ MySQL | Storing the data and running SQL queries |
+| 📊 Power BI | Creating the dashboard |
+| 🧹 Pandas | Working with the dataset |
+| 🔗 SQLAlchemy | Connecting Python to the database |
 
-The dataset was cleaned using Python by:
+## 🔄 Project Workflow
 
-Handling missing values
-Removing duplicate records
-Correcting data types
-Cleaning inconsistent values
-Preparing the data for analysis
+1. **Load the data** – I loaded the shopping data into a Jupyter Notebook using Pandas.
+2. **Clean the data** – I checked missing values, filled missing review ratings using the median for each category, and cleaned the column names.
+3. **Prepare new columns** – I created age groups and converted purchase frequency into number of days.
+4. **Store the data** – I connected Python to MySQL and uploaded the cleaned data to the `customer` table in the `customer_behavior` database.
+5. **Analyse with SQL** – I wrote queries to answer different questions about customers, products and revenue.
+6. **Show the results** – I used Power BI to present the analysis in a dashboard.
 
-4. MySQL Analysis
+## 🔍 Questions I explored with SQL
 
-The cleaned data was loaded into MySQL for structured analysis.
+Here are some of the questions I worked on:
 
-SQL queries were used to:
+1. How much revenue comes from each gender?
+2. Which customers used a discount but still spent more than the average?
+3. Which five products have the highest average review ratings?
+4. What is the average purchase amount for Standard and Express shipping?
+5. How do subscribers and non-subscribers compare?
+6. Which five products have the highest discount rate?
+7. How many customers are new, returning or loyal?
+8. What are the top three purchased products in each category?
+9. How many repeat buyers are subscribers and non-subscribers?
+10. How much revenue comes from each age group?
 
-Filter and sort data
-Aggregate business metrics
-Group data by relevant categories
-Calculate totals and averages
-Identify trends and key insights
+## 📁 Files in This Project
 
-5. Power BI Dashboard
+| File | Description |
+|---|---|
+| `customer behavior analysis.ipynb` | Python notebook for data cleaning and preparation |
+| `customer behavior analysis.sql` | SQL queries used for the analysis |
+| `customer behavior dashboard.pbix` | Power BI dashboard file |
+| `customer_shopping_behavior.csv` | Dataset used by the notebook (keep this file in the project folder) |
 
-The analyzed data was connected to Power BI to create an interactive dashboard.
+> **Note:** The CSV dataset was not included with the project files I received. Add it to the project folder before running the notebook, or change the file path in the notebook if it is stored somewhere else.
 
-The dashboard includes:
+## ▶️ How to Run the Project
 
-Key performance indicators (KPIs)
-Charts and visualizations
-Category-wise analysis
-Trend analysis
-Interactive filters and slicers
-Tools & Technologies
-Tool	Purpose
-Python	Data loading, EDA, and data cleaning
-MySQL	Data storage and SQL analysis
-Power BI	Data visualization and dashboard
-Results
+### 1. Get the files ready
 
-The project provides a complete workflow from raw data to meaningful business insights.
+Download or clone this project and keep the notebook, SQL file, Power BI file and dataset in one folder.
 
-Using Python, MySQL, and Power BI, the analysis helps identify important patterns, trends, and metrics from the dataset and presents them through an interactive dashboard.
+### 2. Install the Python packages
 
+Open a terminal and run:
 
+```bash
+pip install pandas numpy pymysql sqlalchemy jupyter
+```
 
-# Key Takeaways
+### 3. Run the notebook
 
-Used Python for data preparation and exploratory analysis.
-Used MySQL for storing and querying the cleaned data.
-Used Power BI to transform analytical results into an interactive dashboard.
-Developed an end-to-end data analytics project from raw data to visualization.
+Open Jupyter Notebook and run `customer behavior analysis.ipynb` from top to bottom.
+
+Make sure the dataset path is correct.
+
+### 4. Set up MySQL
+
+- Start your MySQL server.
+- Create or use the `customer_behavior` database.
+- Update the database connection details in the notebook.
+- Run the notebook so the cleaned data is uploaded to the `customer` table.
+- Open `customer behavior analysis.sql` in your SQL tool and run the queries.
+
+### 5. Open the Power BI dashboard
+
+Open `customer behavior dashboard.pbix` in Power BI Desktop to view the dashboard.
+
+## 🔐 Important Note
+
+Before sharing this project, remove any personal database username or password from the notebook. Use your own MySQL login details, or store them safely as environment variables. Never upload real passwords to GitHub.
+
+## 💡 What I learned
+
+While doing this project, I got practice in data cleaning, handling missing values, creating new columns, connecting Python with MySQL, writing SQL queries and presenting data in Power BI. I also got a better idea of how customer data can help a business understand its customers.
+
+## 🙌 Thank You
+
+Thanks for checking out my project! Feel free to explore the notebook, SQL queries and Power BI dashboard.
